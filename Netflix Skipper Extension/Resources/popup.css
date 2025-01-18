@@ -3,13 +3,114 @@
 }
 
 body {
-    width: 100px;
     padding: 10px;
-
-    font-family: system-ui;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
     text-align: center;
+    background: #141414;
+    display: flex;
+    -webkit-flex-direction: column;
+    gap: 16px;
+    min-width: 240px;
 }
 
 @media (prefers-color-scheme: dark) {
     /* Dark Mode styles go here. */
+}
+
+h1 {
+    font-size: 18px;
+    margin: 0;
+    
+}
+
+h2 {
+    font-size: 16px;
+    margin: 0;
+    margin-bottom: 12px;
+}
+
+section {
+    background-color: #2e2e2e;
+    border-radius: 12px;
+    padding: 18px;
+    display: flex;
+    -webkit-flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+span {
+    font-size: 14px;
+    width: 100%;
+    text-align: left;
+}
+
+#preferencesForm {
+    display: flex;
+    -webkit-flex-direction: column;
+    align-items: start;
+    font-size: 14px;
+    width: 100%;
+    gap: 6px;
+}
+
+#preferencesForm label, input {
+    cursor: pointer;
+}
+
+#savePreferences {
+    border-radius: 12px;
+    cursor: pointer;
+    align-self: center;
+    background: #e50914;
+    border: none;
+    padding: .5em 1em;
+    transition: opacity .1s ease;
+    width: 100%;
+    font-size: 14px;
+    margin-top: 6px;
+}
+
+#savePreferences:hover {
+    opacity: 0.8;
+}
+
+.check-box {
+    display: flex;
+    align-items: center;
+    gap: 6px
+}
+
+input[type="checkbox"] {
+    position: relative;
+    appearance: none;
+    width: 3em;
+    height: 1.5em;
+    background: #ccc;
+    border-radius: 50px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+input:checked[type="checkbox"] {
+    background: #e50914;
+}
+
+input[type="checkbox"]::after {
+    position: absolute;
+    content: "";
+    width: 1.5em;
+    height: 1.5em;
+    top: 0;
+    left: 0;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+/*    transform: scale(1.1);*/
+    transition: 0.1s;
+}
+
+input:checked[type="checkbox"]::after {
+    left: 50%;
 }

@@ -1,11 +1,30 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="popup.css">
-    <script type="module" src="popup.js"></script>
-</head>
-<body>
-    <strong>Hello World!</strong>
-</body>
+    <head>
+        <meta charset="UTF-8">
+            <link rel="stylesheet" href="popup.css">
+                <title>Netflix Skipper Settings</title>
+    </head>
+    <body>
+        <h1>Netflix Auto Skipper</h2>
+        <section>
+            <h2>Preferences</h2>
+            <form id="preferencesForm">
+                <label class="check-box">
+                    <input type="checkbox" id="skipIntros"> Skip Intros
+                </label>
+                <label class="check-box">
+                    <input type="checkbox" id="skipCredits"> Skip Credits
+                </label>
+                <button type="submit" id="savePreferences">Save</button>
+            </form>
+        </section>
+        
+        <section>
+            <h2>Credits</h2>
+            <span>Developed by <a href="https://www.achishengelia.com" target="_blank" rel="noreferrer">Achi Shengelia</a> </span>
+        </section>
+        
+        <script src="popup.js"></script>
+    </body>
 </html>
